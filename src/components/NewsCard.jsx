@@ -1,6 +1,6 @@
-
 import { AiFillStar } from "react-icons/ai";
 import { BsFillEyeFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   const {
@@ -42,7 +42,7 @@ const NewsCard = ({ news }) => {
             <span className="text-sm text-gray-500">{total_view} views</span>
           </div>
         </div>
-        <button className="btn btn-sm btn-primary mt-3">Read More</button>
+        <Link to={`/news/${news._id}`} className="btn btn-sm btn-primary mt-3">Read More</Link>
       </div>
     </div>
   );
